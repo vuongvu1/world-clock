@@ -102,7 +102,7 @@
   }
 
   #hour {
-    width: 1.8%;
+    width: 2%;
     height: 25%;
     top: 25%;
     left: 48.85%;

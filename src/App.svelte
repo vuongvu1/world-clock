@@ -1,15 +1,17 @@
 <script>
   import Clock from "./components/clock.svelte";
+  import { getAllTimezones } from "./api";
   import "./styles.css";
 
-  let name = "World";
+  (async () => {
+    const timezones = await getAllTimezones();
 
-  let d = new Date();
-  d.toLocaleString("en-US", { timeZone: "America/New_York" });
+    console.log({ timezones });
+  })();
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>Hello</h1>
   <p>
     Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
     how to build Svelte apps.
